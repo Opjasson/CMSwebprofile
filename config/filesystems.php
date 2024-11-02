@@ -74,4 +74,11 @@ return [
         public_path('storage') => storage_path('app/public'),
     ],
 
+
+    // direktori path image
+    'img' => [
+    'driver' => 'local',
+    'root' => public_path('img'),
+    'visibility' => 'public',
+],
 ];
