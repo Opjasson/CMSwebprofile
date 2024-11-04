@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tata_letaks', function (Blueprint $table) {
+        Schema::create('halaman_tipes', function (Blueprint $table) {
             $table->id();
-            $table->string('header');
-            $table->string('menu');
-            $table->string('path'); //path gambar
+            $table->string('judul',50);
+            $table->string('link',50);
+            $table->string('tipe',50);
+            $table->string('kategori',50);
+            $table->string('folder',100);
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tata_letaks');
+        Schema::dropIfExists('halaman_tipes');
     }
 };

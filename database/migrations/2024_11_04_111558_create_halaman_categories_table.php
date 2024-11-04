@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('img', function (Blueprint $table) {
+        Schema::create('halaman_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('judul',50);
+            $table->string('link',50);
+            $table->string('tipe',50);
+            $table->dateTime('tgl');
+            $table->string('publish')->default('1');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('img');
+        Schema::dropIfExists('halaman_categories');
     }
 };
