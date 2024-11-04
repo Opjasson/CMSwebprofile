@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('halaman_categories', function (Blueprint $table) {
+        Schema::create('berita_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('judul',50);
-            $table->string('link',50);
-            $table->string('tipe',50);
-            $table->dateTime('tgl');
-            $table->enum('publish', ['ya', 'tidak'])->default('ya');
+            
             $table->timestamps();
         });
     }
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('halaman_categories');
+        Schema::dropIfExists('berita_categories');
     }
 };
