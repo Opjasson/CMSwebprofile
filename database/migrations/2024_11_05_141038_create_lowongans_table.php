@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact_isis', function (Blueprint $table) {
+        Schema::create('lowongans', function (Blueprint $table) {
             $table->id();
-            $table->string('id_contact',50);
-            $table->string('id_user',50);
-            $table->text('isi');
+            $table->string('namaPerusahaan',100);
+            $table->string('no_Hp',50);
+            $table->dateTime('tgl_buka');
+            $table->dateTime('tgl_tutup');
             $table->string('gambar',200);
-            $table->dateTime('tgl');
-            $table->enum('publish', ['ya', 'tidak']);
+            $table->text('deskripsi');
+            $table->enum('active',['ya', 'tidak'])->default('ya');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact_isis');
+        Schema::dropIfExists('lowongans');
     }
 };
