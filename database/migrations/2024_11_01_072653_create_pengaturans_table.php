@@ -64,10 +64,10 @@ return new class extends Migration
             $table->string('warna_pelengkap',20);
             $table->dateTime('tgl');
             $table->dateTime('tgl_upgrade');
-            $table->string('publish')->default('1');
+            $table->enum('publish', ['ya', 'tidak'])->default('ya');
             $table->text('note');
-            $table->string('aktif');
-            $table->string('sudah_cek');
+            $table->enum('aktif', ['ya', 'tidak']);
+            $table->enum('sudahCek', ['ya', 'tidak']);
             $table->timestamps();
         });
     }

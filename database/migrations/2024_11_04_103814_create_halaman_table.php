@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('gambar',200);
             $table->integer('urutan');
             $table->integer('up_halaman');
-            $table->string('sub_halaman');
+            $table->enum('sub_halaman', ['ya','tidak']);
             $table->timestamps();
         });
     }
