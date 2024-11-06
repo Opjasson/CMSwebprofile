@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('module_kategoris', function (Blueprint $table) {
             $table->id();
+            $table->string('judul',50);
+            $table->string('link',50);
+            $table->dateTime('tgl');
+            $table->enum('publish',['ya', 'tidak'])->default('ya');
             $table->timestamps();
         });
     }
