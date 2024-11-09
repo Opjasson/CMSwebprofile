@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul',50);
             $table->string('link',50);
-            $table->enum('tipe',['ya', 'tidak']);
+            $table->string('tipe',50);
             $table->string('kategori',50);
             $table->string('folder',100);
             $table->text('deskripsi');
