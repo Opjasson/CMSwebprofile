@@ -13,6 +13,13 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    
+    <div>
+        <div class="mt-44">
+            <main>
+                {{-- Content --}}
+                @yield('content')
+            </main>
+        </div>
+    </div>
 </body>
 </html>
