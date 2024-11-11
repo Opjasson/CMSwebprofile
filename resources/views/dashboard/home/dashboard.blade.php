@@ -15,7 +15,7 @@
         </nav>
 
         <div class="flex">
-            <aside class="bg-blue-200 w-80 h-screen">
+            <aside class="bg-blue-200 w-80">
                 <ul class="flex flex-col list-none">
                     <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
@@ -28,8 +28,7 @@
                         <a href="/adm">Beranda</a>
 
                     </li>
-                    <li class="p-2 border-b-2 hover:cursor-pointer">
-                        <div class="gap-2 flex hover:bg-blue-500">
+                    <li class="p-2 border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">  
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 viewBox="0 0 24 24">
@@ -38,70 +37,69 @@
                                     clip-rule="evenodd" />
                             </svg>
                             <a href="/adm">Konten</a>
-                        </div>
-                        <ul class="pl-9">
-                            <li>
-                                <a href="/adm">Sambutan</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Menu</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Kategori Berita</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Berita</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Komentar</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Pesan Web</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Album Foto</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Upload Foto</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Foto</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Profile Sekolah</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Kontak</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Kategori Video</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Video</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Reels</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Buku Tamu</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Link</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Polling</a>
-                            </li>
-                            <li>
-                                <a href="/adm">File Download</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Madding Kategori</a>
-                            </li>
-                            <li>
-                                <a href="/adm">Mading</a>
-                            </li>
-                        </ul>
                     </li>
+                    <ul>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer">
+                            <a href="/adm">Sambutan</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Menu</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Kategori Berita</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Berita</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Komentar</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Pesan Web</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Album Foto</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Upload Foto</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Foto</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Profile Sekolah</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Kontak</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Kategori Video</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Video</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Reels</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Buku Tamu</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Link</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Polling</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">File Download</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Madding Kategori</a>
+                        </li>
+                        <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
+                            <a href="/adm">Mading</a>
+                        </li>
+                    </ul>
                     <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
