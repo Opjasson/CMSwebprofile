@@ -3,6 +3,8 @@
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\HomeController;
+use Illuminate\Support\Facades\Auth;
+
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('auth.login');
