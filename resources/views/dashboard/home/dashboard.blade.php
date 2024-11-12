@@ -1,5 +1,4 @@
 @extends('layouts.dashboards.dashboard-layout')
-
 @section('content')
     <div>
         <nav class="flex justify-between bg-blue-400 px-5 py-3">
@@ -26,9 +25,8 @@
                                 clip-rule="evenodd" />
                         </svg>
                         <a href="/adm">Beranda</a>
-
                     </li>
-                    <li class="p-2 border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">  
+                    <li onclick="dropDown1()" id="konten" class="p-2 border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">  
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 viewBox="0 0 24 24">
@@ -39,7 +37,7 @@
                             <a href="/adm">Konten</a>
                     </li>
                     <x-listKonten/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <li onclick="dropDown2()" class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">

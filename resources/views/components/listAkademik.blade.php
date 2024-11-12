@@ -1,4 +1,4 @@
-<ul>
+<ul style="display: none" id="listAkademik">
     <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer">
         <a href="/adm">Mata Pelajaran</a>
     </li>
