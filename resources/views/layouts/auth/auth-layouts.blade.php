@@ -14,7 +14,7 @@
 </head>
 <body>
     <div>
-        <div class="mt-44">
+        <div class="mt-36">
             <main>
                 {{-- Content --}}
                 @yield('content')
