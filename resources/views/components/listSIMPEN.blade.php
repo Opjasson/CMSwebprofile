@@ -1,4 +1,4 @@
-<ul>
+<ul class="dropDown " style="display: none" id="listSIMPEN">
     <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer">
         <a href="/adm">Sambutan</a>
     </li>

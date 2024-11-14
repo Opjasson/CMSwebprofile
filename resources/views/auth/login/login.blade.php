@@ -1,5 +1,5 @@
 @extends('layouts.auth.auth-layouts')
-
+@section('title', 'Login')
 @section('content')
     <div class="sm:w-10/12 md:w-2/3 lg:w-2/4 rounded-lg w-fit m-auto py-16 bg-gradient-to-r from-[#eeaeca] to-[#94bbe9]">
         <div class="flex flex-col items-center md:p-0 p-2">

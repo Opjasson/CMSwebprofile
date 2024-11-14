@@ -1,22 +1,46 @@
 @extends('layouts.dashboards.dashboard-layout')
 @section('content')
     <div>
-        <nav class="flex justify-between bg-blue-400 px-5 py-3">
+        <nav class="flex justify-between bg-blue-400 px-5 py-2">
             <div class="flex gap-3">
                 <img src="/" alt="LogoPT">
                 <h1>ADMIN</h1>
             </div>
-            <div class="flex gap-3">
-                <p>nama perusahaan anda</p>
-                <img src="" alt="icon">
-                <img src="" alt="icon">
+            <div class="flex gap-1 max-h-max ">
+                <p class="mt-2">nama perusahaan anda</p>
+                <p id="pc" class="hover:bg-blue-200 px-4 py-2 ">
+                    <svg class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M5 3a2 2 0 0 0-2 2v5h18V5a2 2 0 0 0-2-2H5ZM3 14v-2h18v2a2 2 0 0 1-2 2h-6v3h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-3H5a2 2 0 0 1-2-2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </p>
+                
+                <p id="user" class="flex hover:bg-blue-200 px-3 py-2 ">
+                    <svg class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                            clip-rule="evenodd" />
+                        </svg>
+                        
+                        <svg class="w-[23px] h-[23px] -ml-2 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="m8 10 4 4 4-4" />
+                    </svg>
+                </p>
+                <x-listUser/>
             </div>
         </nav>
 
         <div class="flex">
-            <aside class="bg-blue-200 w-80">
-                <ul class="flex flex-col list-none">
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+            <aside class="bg-blue-200 w-80 h-screen">
+                <ul class="flex flex-col list-none text-slate-600">
+                    <li id="dashboard"
+                        class="hover:text-white p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -26,18 +50,20 @@
                         </svg>
                         <a href="/adm">Beranda</a>
                     </li>
-                    <li onclick="dropDown1()" id="konten" class="p-2 border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">  
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11.5c.07 0 .14-.007.207-.021.095.014.193.021.293.021h2a2 2 0 0 0 2-2V7a1 1 0 0 0-1-1h-1a1 1 0 1 0 0 2v11h-2V5a2 2 0 0 0-2-2H5Zm7 4a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm-6 4a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1ZM7 6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7Zm1 3V8h1v1H8Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <a href="/adm">Konten</a>
+                    <li id="Konten"
+                        class="p-2 hover:text-white border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11.5c.07 0 .14-.007.207-.021.095.014.193.021.293.021h2a2 2 0 0 0 2-2V7a1 1 0 0 0-1-1h-1a1 1 0 1 0 0 2v11h-2V5a2 2 0 0 0-2-2H5Zm7 4a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm-6 4a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1ZM7 6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7Zm1 3V8h1v1H8Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <a href="/adm">Konten</a>
                     </li>
-                    <x-listKonten/>
-                    <li onclick="dropDown2()" class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listKonten />
+                    <li id="Akademik"
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -47,8 +73,9 @@
                         </svg>
                         <a href="/adm">Akademik</a>
                     </li>
-                    <x-listAkademik/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listAkademik />
+                    <li id="Data" 
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -58,8 +85,9 @@
 
                         <a href="/adm">Data</a>
                     </li>
-                    <x-listData/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listData />
+                    <li id="Tampilan" 
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -70,8 +98,9 @@
 
                         <a href="/adm">Tampilan</a>
                     </li>
-                    <x-listTampilan/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listTampilan />
+                    <li id="Exclusive"
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -81,8 +110,9 @@
 
                         <a href="/adm">Exclusive</a>
                     </li>
-                    <x-listExclusive/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listExclusive />
+                    <li id="PPDB"
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -91,8 +121,9 @@
                         </svg>
                         <a href="/adm">PPDB</a>
                     </li>
-                    <x-listPPDB/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listPPDB />
+                    <li id="SIMPEN"
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -101,8 +132,9 @@
                         </svg>
                         <a href="/adm">SIMPEN</a>
                     </li>
-                    <x-listSIMPEN/>
-                    <li class="p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
+                    <x-listSIMPEN />
+                    <li id="Pengaturan"
+                        class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -113,7 +145,7 @@
 
                         <a href="/adm">Pengaturan</a>
                     </li>
-                    <x-listPengaturan/>
+                    <x-listPengaturan />
                 </ul>
             </aside>
 
