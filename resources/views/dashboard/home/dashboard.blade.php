@@ -18,17 +18,17 @@
                 </p>
                 
                 <p id="user" class="flex hover:bg-blue-200 px-3 py-2 ">
-                    <svg class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
+                    <svg id="user" class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
+                        <path id="user" fill-rule="evenodd"
                             d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
                             clip-rule="evenodd" />
                         </svg>
                         
-                        <svg class="w-[23px] h-[23px] -ml-2 text-gray-800 dark:text-white" aria-hidden="true"
+                        <svg id="user" class="w-[23px] h-[23px] -ml-2 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        <path id="user" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                         d="m8 10 4 4 4-4" />
                     </svg>
                 </p>
@@ -36,8 +36,8 @@
             </div>
         </nav>
 
-        <div class="flex">
-            <aside class="bg-blue-200 w-80 h-screen">
+        <div class="flex max-h-max">
+            <aside class="bg-blue-200 w-80">
                 <ul class="flex flex-col list-none text-slate-600">
                     <li id="dashboard"
                         class="hover:text-white p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
@@ -149,8 +149,9 @@
                 </ul>
             </aside>
 
-            <main class="bg-slate-300 w-screen">
-                <h1>Hallo world</h1>
+            <main class="bg-slate-300 w-screen p-8">
+                <h1 class="text-4xl font-bold">Ubah Sambutan</h1>
+                <x-mainForm.form/>
             </main>
         </div>
 
