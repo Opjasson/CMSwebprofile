@@ -1,5 +1,34 @@
-<aside class="bg-blue-200 lg:w-80 md:w-60 md:block hidden">
+<aside id="sidebar" class="bg-blue-200 lg:block hidden lg:w-80 md:w-60">
     <ul class="flex flex-col list-none text-slate-600">
+        <div class="md:hidden flex border gap-1 max-h-max items-center">
+            <p class="mt-2">nama perusahaan anda</p>
+            <p id="pc" class="hover:bg-blue-200 px-4 py-2 ">
+                <svg class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M5 3a2 2 0 0 0-2 2v5h18V5a2 2 0 0 0-2-2H5ZM3 14v-2h18v2a2 2 0 0 1-2 2h-6v3h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-3H5a2 2 0 0 1-2-2Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </p>
+            
+            <p onclick="user()" class="flex h-fit hover:bg-blue-200 md:px-3 md:py-2 ">
+                <svg id="user1" class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                viewBox="0 0 24 24">
+                    <path id="user" fill-rule="evenodd"
+                        d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    
+                    <svg id="user1" class="w-[23px] h-[23px] -ml-2 text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path id="user1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                    d="m8 10 4 4 4-4" />
+                </svg>
+            </p>
+            <x-listUser2/>
+        </div>
+        <x-listUser/>
         <li id="dashboard"
             class="hover:text-white p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"

@@ -1,4 +1,4 @@
-<ul style="display: none" id="listUser"  class="absolute md:top-14 md:right-[19px] top-24 right-1 border border-slate-400 shadow-lg bg-slate-200 w-52 py-1 rounded-md text-sm" id="listUser">
+<ul style="display: none" id="listUser2"  class="absolute md:top-14 md:right-[19px] top-24 -right-28 border border-slate-400 shadow-lg bg-slate-200 w-52 py-1 rounded-md text-sm" id="listUser">
     <li class="px-3 py-1 flex hover:bg-slate-100 gap-1 items-center">
         <svg class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">

@@ -1,4 +1,4 @@
-<ul class="dropDown " style="display: none" id="listPPDB">
+<ul style="display: none" id="listPPDB">
     <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer">
         <a href="/adm">Banner</a>
     </li>
