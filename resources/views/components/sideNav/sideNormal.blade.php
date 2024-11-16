@@ -1,4 +1,4 @@
-<aside class="bg-blue-200 lg:w-80 md:w-60 md:block hidden md:static absolute">
+<aside class="bg-blue-200 lg:w-80 md:w-60 md:block hidden">
     <ul class="flex flex-col list-none text-slate-600">
         <li id="dashboard"
             class="hover:text-white p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">

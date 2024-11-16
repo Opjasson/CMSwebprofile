@@ -7,7 +7,7 @@
                 <h1>ADMIN</h1>
             </div>
 
-            <svg class="md:hidden block w-[34px] h-[34px] mt-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg id="menu" class="md:hidden hover:cursor-pointer hover:rotate-3 hover:text-white block w-[34px] h-[34px] mt-1 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
             </svg>
               
@@ -41,9 +41,10 @@
                 <x-listUser/>
             </div>
         </nav>
-
+        <x-sideNav.sideHp/>
         <div class="flex max-h-max w-max">
-            <x-sideNav.side/>
+            <x-sideNav.sideNormal/>
+            
 
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-[1031px] md:w-[33rem] w-[28rem] ">
                 <h1 class="text-4xl font-semiboldbold">Ubah Sambutan</h1>

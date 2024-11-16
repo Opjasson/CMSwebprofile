@@ -9,7 +9,8 @@ document.addEventListener("click", function (e) {
         "PPDB",
         "SIMPEN",
         "Pengaturan",
-        "user"
+        "user",
+        'menu'
     ];
     var listID = [
         "listKonten",
@@ -20,7 +21,8 @@ document.addEventListener("click", function (e) {
         "listPPDB",
         "listSIMPEN",
         "listPengaturan",
-        "listUser"
+        "listUser",
+        "sidebar"
     ];
         for (let i = 0; i < listTitle.length; i++) {
             var testId = document.getElementById(listID[i]);
