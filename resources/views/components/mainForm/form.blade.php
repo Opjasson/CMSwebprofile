@@ -1,21 +1,21 @@
-<form class="flex flex-col gap-4 pb-12" action="" method="post">
-    <div class="flex justify-between text-center">
+<form class="flex flex-col gap-4 pb-14 pt-3" action="" method="post">
+    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
         <label for="">Judul</label>
-        <div>:</div>
-        <input name="judul" placeholder="Masukan judul" required class="w-3/4 py-[0.30rem] px-2 rounded-lg"
+        <div class="lg:block hidden">:</div>
+        <input name="judul" placeholder="Masukan judul" required class="lg:w-3/4 w-full py-[0.30rem] px-2 rounded-lg"
             type="text">
     </div>
 
-    <div class="flex justify-between text-center">
+    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
         <label class="h-fit pr-[25px]" for="">Isi</label>
-        <div>:</div>
-        <textarea placeholder="Masukan isi content" class="w-3/4 py-[0.30rem] px-2 rounded-lg" name="isi" id="isi"
+        <div class="lg:block hidden">:</div>
+        <textarea placeholder="Masukan isi content" class="lg:w-3/4 w-full py-[0.30rem] px-2 rounded-lg" name="isi" id="isi"
             cols="30" rows="10"></textarea>
     </div>
 
-    <div class="flex justify-between text-center">
+    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
         <label for="">Gambar</label>
-        <div>:</div>
+        <div class="lg:block hidden">:</div>
         <div class="w-3/4 py-[0.30rem] px-2 rounded-lg  text-left">
             <img class=" block w-72" src="" alt="profile">
             <input class="border w-full p-2" name="img" type="file">

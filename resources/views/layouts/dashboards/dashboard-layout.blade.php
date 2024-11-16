@@ -10,7 +10,7 @@
     <title>Dashboard layout</title>
 </head>
 
-<body>
+<body class="bg-blue-700">
     @yield('content')
     
     @vite('resources/js/app.js')
