@@ -11,7 +11,7 @@
                 </svg>
             </p>
             
-            <p onclick="user()" class="flex h-fit hover:bg-blue-200 md:px-3 md:py-2 ">
+            <p onclick="user1()" class="flex h-fit hover:bg-blue-200 md:px-3 md:py-2 ">
                 <svg id="user1" class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                 viewBox="0 0 24 24">
@@ -29,7 +29,7 @@
             <x-listUser2/>
         </div>
         <x-listUser/>
-        <li id="dashboard"
+        <a href="/dashboard" id="dashboard"
             class="hover:text-white p-2 border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -38,9 +38,9 @@
                     d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z"
                     clip-rule="evenodd" />
             </svg>
-            <a href="/adm">Beranda</a>
-        </li>
-        <li id="Konten"
+            Beranda
+        </a>
+        <li id="Konten" onclick="dropDown1('listKonten')"
             class="p-2 hover:text-white border-b-2 gap-2 flex hover:bg-blue-800  hover:cursor-pointer">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -52,7 +52,7 @@
             <a href="/adm">Konten</a>
         </li>
         <x-listKonten />
-        <li id="Akademik"
+        <li id="Akademik" onclick="dropDown1('listAkademik')"
             class="p-2  active:text-red-600 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -64,7 +64,7 @@
             <a href="/adm">Akademik</a>
         </li>
         <x-listAkademik />
-        <li id="Data" 
+        <li id="Data" onclick="dropDown1('listData')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -76,7 +76,7 @@
             <a href="/adm">Data</a>
         </li>
         <x-listData />
-        <li id="Tampilan" 
+        <li id="Tampilan" onclick="dropDown1('listTampilan')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -89,7 +89,7 @@
             <a href="/adm">Tampilan</a>
         </li>
         <x-listTampilan />
-        <li id="Exclusive"
+        <li id="Exclusive" onclick="dropDown1('listExclusive')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -101,7 +101,7 @@
             <a href="/adm">Exclusive</a>
         </li>
         <x-listExclusive />
-        <li id="PPDB"
+        <li id="PPDB" onclick="dropDown1('listPPDB')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -112,7 +112,7 @@
             <a href="/adm">PPDB</a>
         </li>
         <x-listPPDB />
-        <li id="SIMPEN"
+        <li id="SIMPEN" onclick="dropDown1('listSIMPEN')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -123,7 +123,7 @@
             <a href="/adm">SIMPEN</a>
         </li>
         <x-listSIMPEN />
-        <li id="Pengaturan"
+        <li id="Pengaturan" onclick="dropDown1('listPengaturan')"
             class="p-2 hover:text-white border-b-2 hover:cursor-pointer hover:bg-blue-800 gap-2 flex">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"

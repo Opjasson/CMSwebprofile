@@ -23,7 +23,7 @@
                     </svg>
                 </p>
                 
-                <p id="user" onclick="user()" class="flex hover:bg-blue-200 md:px-3 md:py-2 ">
+                <p id="user" class="flex hover:bg-blue-200 md:px-3 md:py-2 ">
                     <svg id="user" class="w-[23px] h-[23px] text-gray-800 dark:text-white" aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     viewBox="0 0 24 24">
@@ -41,12 +41,14 @@
                 <x-listUser/>
             </div>
         </nav>
+        {{-- <x-sideNav.sideHp/> --}}
         <div class="lg:flex max-h-max w-max">
             <x-sideNav.sideNormal/>
             
 
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-[1031px] md:w-[33rem] w-[28rem] ">
-                <h1 class="text-4xl font-semiboldbold">Welcome dashboard</h1>
+                <h1 class="text-4xl font-semiboldbold">Ubah Sambutan</h1>
+                <x-mainForm.form/>
             </main>
         </div>
 

@@ -1,6 +1,6 @@
 <ul style="display: none" id="listKonten">
     <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer">
-        <a href="/adm">Sambutan</a>
+        <a href="/dashboard/sambutan">Sambutan</a>
     </li>
     <li class="hover:bg-blue-500 pl-9 hover:cursor-pointer ">
         <a href="/adm">Menu</a>

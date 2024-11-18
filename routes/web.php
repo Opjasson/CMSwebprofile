@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\HomeController;
+use App\Http\Controllers\Dashboard\Konten\SambutanController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -20,5 +21,6 @@ Route::middleware(['guest'])->group(
 Route::middleware(['auth'])->group(
     function () {
         Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard.home');
+        Route::get('/dashboard/sambutan', [SambutanController::class, 'index'])->name('dashboard.konten');
     }
 );
