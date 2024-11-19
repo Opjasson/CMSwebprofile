@@ -1,4 +1,3 @@
-import './bootstrap';
-import './dropDown'
-
-
+import "./bootstrap";
+import "./dropDown";
+import "flowbite";

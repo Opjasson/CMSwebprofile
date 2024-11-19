@@ -18,7 +18,7 @@
         <div class="lg:block hidden">:</div>
         <div class="w-3/4 py-[0.30rem] px-2 rounded-lg  text-left">
             <img class=" block w-72" src="" alt="profile">
-            <input class="border w-full p-2" name="img" type="file">
+            <input class="border border-slate-600 w-full rounded-lg" name="img" type="file">
         </div>
     </div>
 
