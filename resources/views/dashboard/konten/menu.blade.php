@@ -1,4 +1,7 @@
 @extends('layouts.dashboards.dashboard-layout')
+
+@section('title', 'Menu')
+    
 @section('content')
     <div class="md:w-full w-max h-screen">
         <nav class="flex justify-between bg-blue-400 px-5 py-2 md:w-full w-[28rem] md:text-base text-sm">
