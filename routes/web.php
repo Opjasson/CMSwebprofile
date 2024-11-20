@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\Konten\SambutanController;
 use App\Http\Controllers\Dashboard\Konten\MenuController;
-
+use App\Http\Controllers\Setting\Profile\ProfileController;
 
 Route::get('/', function () {
     return view("welcome");
@@ -29,5 +29,6 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard.home');
         Route::get('/dashboard/sambutan', [SambutanController::class, 'index'])->name('dashboard.konten');
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
+        Route::get('/dashboard/profile', [ProfileController::class, 'index'])->name('user.profile');
     }
 );

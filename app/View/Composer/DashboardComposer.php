@@ -24,7 +24,7 @@ class DashboardComposer
 
         $view->with('route', [
             'dashboard' => route('dashboard.home'),
-            'profile' => '/',
+            'profile' => route('user.profile'),
             'logout' => route('auth.logout')
         ]);
     }
