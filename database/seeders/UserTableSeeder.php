@@ -16,7 +16,11 @@ class UserTableSeeder extends Seeder
         //
         User::factory()->create([
             'name' => 'testing user',
+            'username' => 'jasson@company.co.id',
             'email' => 'test@example.com',
+            'alamat' => 'jalan mejasem baru 4 no 45',
+            'kota' => 'kota Tegal',
+            'telepon' => '087895031524',
         ]);
     }
 }

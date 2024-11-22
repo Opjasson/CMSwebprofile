@@ -29,6 +29,8 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard.home');
         Route::get('/dashboard/sambutan', [SambutanController::class, 'index'])->name('dashboard.konten');
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
-        Route::get('/dashboard/profile', [ProfileController::class, 'index'])->name('user.profile');
+        Route::get('/dashboard/profile/{userId}', [ProfileController::class, 'index'])->name('user.profile');
+        Route::put('/dashboard/profile/{userId}', [ProfileController::class, 'update'])->name('user.profile.update');
+        Route::get('/dashboard/profile/{userId}/password', [ProfileController::class, 'index'])->name('user.profile.password');
     }
 );
