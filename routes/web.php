@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\Konten\SambutanController;
 use App\Http\Controllers\Dashboard\Konten\MenuController;
+use App\Http\Controllers\Setting\Password\PasswordController;
 use App\Http\Controllers\Setting\Profile\ProfileController;
 
 Route::get('/', function () {
@@ -31,6 +32,8 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
         Route::get('/dashboard/profile/{userId}', [ProfileController::class, 'index'])->name('user.profile');
         Route::put('/dashboard/profile/{userId}', [ProfileController::class, 'update'])->name('user.profile.update');
-        Route::get('/dashboard/profile/{userId}/password', [ProfileController::class, 'index'])->name('user.profile.password');
+        Route::get('/dashboard/profile/{userId}/password', [PasswordController::class, 'index'])->name('user.profile.password');
+        Route::put('/dashboard/profile/{userId}/password', [PasswordController::class, 'update'])->name('user.profile.password.update');
+
     }
 );

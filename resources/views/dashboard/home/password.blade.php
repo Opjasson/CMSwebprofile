@@ -49,77 +49,71 @@
                 <x-listUser />
             </div>
         </nav>
+
         <div class="lg:flex max-h-max lg:w-full md:w-[48rem] w-max">
             <x-sideNav.sideNormal />
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem]">
                 <h1 class="text-4xl font-semiboldbold mb-5">Ubah data profile</h1>
                 <div class="w-full p-4">
+                    @if (Session::get('succes'))
+                        <div class="w-1/2 md:m-auto md:pl-9 py-2 md:text-xl text-base font-semibold text-green-600  mb-1">
+                            {{ Session::get('succes') }}</div>
+                    @endif
+
                     <form action="{{ $action }}" method="POST">
                         @csrf
                         @method('PUT')
-                        
                         <div class="mb-3 flex gap-7">
-                            <label for="nama"
-                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                            <label for="username"
+                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">userName</label>
                             <div class=" text-right">:</div>
                             <div class="flex flex-col w-full gap-3">
-                                <input type="text" id="nama" name="name" value="{{ $data->name }}"
+                                <input type="text" id="username" name="username" value="{{ $data->username }}"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
-                                @error('name')
+                                @error('username')
                                     <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
                                 @enderror
-                            </div>
-                        </div>
-                        <div class="mb-3 flex  gap-7">
-                            <label for="Alamat"
-                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
-                            <div class=" text-right">:</div>
-                            <div class="flex flex-col w-full gap-3">
-                                <textarea id="Alamat" rows="4" name="alamat"
-                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{ $data->alamat }}</textarea>
-                                @error('alamat')
-                                    <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mb-3 flex  gap-7">
-                            <label for="Kota"
-                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Kota</label>
-                            <div class=" text-right">:</div>
-                            <div class="flex flex-col w-full gap-3">
-                                <input type="text" id="Kota" name="kota"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    value="{{ $data->kota }}" />
-                                    @error('kota')
-                                        <div class="text-red-600 border -mt-3 md:text-base text-sm">{{ $message }}</div>
-                                    @enderror
-                            </div>
-                        </div>
-                        <div class="mb-3 flex  gap-7">
-                            <label for="Telepon"
-                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Telepon</label>
-                            <div class=" text-right">:</div>
-                            <div class="flex flex-col w-full gap-3">
-                                <input type="text" id="Telepon" value="{{ $data->telepon }}" name="telepon"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="name@flowbite.com" />
-                                    @error('telepon')
-                                        <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
-                                    @enderror
                             </div>
                         </div>
 
                         <div class="mb-3 flex  gap-7">
-                            <label for="Email"
-                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                            <label for="Passwordlama"
+                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Password
+                                lama</label>
                             <div class=" text-right">:</div>
                             <div class="flex flex-col w-full gap-3">
-                                <input type="email" id="Email" name="email" value="{{ $data->email }}"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="name@flowbite.com" />
-                                    @error('email')
-                                        <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
-                                    @enderror
+                                <input type="password" id="Passwordlama" name="Passwordlama"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                @error('Passwordlama')
+                                    <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3 flex  gap-7">
+                            <label for="passwordbaru"
+                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Password
+                                baru</label>
+                            <div class=" text-right">:</div>
+                            <div class="flex flex-col w-full gap-3">
+                                <input type="password" id="passwordbaru" name="passwordbaru"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                @error('passwordbaru')
+                                    <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="mb-3 flex  gap-7">
+                            <label for="confPassword"
+                                class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirm
+                                Password</label>
+                            <div class=" text-right">:</div>
+                            <div class="flex flex-col w-full gap-3">
+                                <input type="Password" id="confPassword" name="confPassword"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                @error('confPassword')
+                                    <div class="text-red-600 -mt-3 md:text-base text-sm">{{ $message }}</div>
+                                @enderror
                             </div>
 
                         </div>

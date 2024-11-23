@@ -29,6 +29,9 @@ class DashboardComposer
             'profile' => route('user.profile', [
                 'userId' => $user->id
             ]),
+            'password' => route('user.profile.password', [
+                'userId' => $user->id
+            ]),
             'logout' => route('auth.logout')
         ]);
     }

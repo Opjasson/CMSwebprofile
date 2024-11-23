@@ -18,7 +18,7 @@
                 clip-rule="evenodd" />
         </svg>
 
-        <a href="">Password</a>
+        <a href="{{ $route['password'] }}">Password</a>
     </li>
 
     <p class="border-b-2 border-slate-600 mt-3"></p>
