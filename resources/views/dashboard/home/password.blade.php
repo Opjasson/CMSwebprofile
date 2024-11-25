@@ -55,6 +55,7 @@
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem]">
                 <h1 class="text-4xl font-semiboldbold mb-5">Ubah data profile</h1>
                 <div class="w-full p-4">
+                    {{-- Get session succes in method update --}}
                     @if (Session::get('succes'))
                         <div class="w-1/2 md:m-auto md:pl-9 py-2 md:text-xl text-base font-semibold text-green-600  mb-1">
                             {{ Session::get('succes') }}</div>

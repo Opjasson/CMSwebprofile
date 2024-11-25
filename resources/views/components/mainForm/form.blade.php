@@ -6,11 +6,10 @@
             type="text">
     </div>
 
-    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
+    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3 h-56 ">
         <label class="h-fit pr-[25px]" for="">Isi</label>
         <div class="lg:block hidden">:</div>
-        <textarea placeholder="Masukan isi content" class="lg:w-3/4 w-full py-[0.30rem] px-2 rounded-lg" name="isi" id="isi"
-            cols="30" rows="10"></textarea>
+        @include('components.mainForm._wysiwyg')
     </div>
 
     <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">

@@ -17,6 +17,9 @@ export default {
         },
     },
     plugins: [
-        require('flowbite/plugin')
+        require('flowbite/plugin')({
+            wysiwyg : true,
+        }),
+        require('./node_modules/flowbite-typography')
     ],
 };
