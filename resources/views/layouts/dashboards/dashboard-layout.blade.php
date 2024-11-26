@@ -7,14 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css'])
     <title>{{ $app['name'] }} | @yield('title')</title>
-    <script type="importmap">
-        {
-            "imports": {
-                "https://esm.sh/v135/prosemirror-model@1.22.3/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs", 
-                "https://esm.sh/v135/prosemirror-model@1.22.1/es2022/prosemirror-model.mjs": "https://esm.sh/v135/prosemirror-model@1.19.3/es2022/prosemirror-model.mjs"
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.css" />
 </head>
 
 <body>
@@ -22,7 +15,7 @@
 
     @vite('resources/js/app.js')
     
-
+   @yield('script')
 </body>
 
 </html>

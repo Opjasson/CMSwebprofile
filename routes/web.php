@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(
         Route::post('/logout', [LogoutController::class, 'logout'])->name('auth.logout');
         Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard.home');
         Route::get('/dashboard/sambutan', [SambutanController::class, 'index'])->name('dashboard.konten');
+        Route::post('/dashboard/sambutan', [SambutanController::class, 'action'])->name('dashboard.konten.action');
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
         Route::get('/dashboard/profile/{userId}', [ProfileController::class, 'index'])->name('user.profile');
         Route::put('/dashboard/profile/{userId}', [ProfileController::class, 'update'])->name('user.profile.update');
