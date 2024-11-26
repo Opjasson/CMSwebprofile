@@ -53,8 +53,6 @@
             <x-sideNav.sideNormal />
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem] ">
                 <h1 class="text-4xl font-semiboldbold">Ubah Sambutan</h1>
-
-
                 @include('dashboard.konten.sambutan.form')
             </main>
         </div>

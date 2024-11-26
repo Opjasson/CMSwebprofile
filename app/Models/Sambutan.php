@@ -9,6 +9,7 @@ class Sambutan extends Model
 {
     //
     use HasFactory;
+    protected $table = "sambutan";
 
     protected $fillable = [
         'judul',
