@@ -1,21 +1,37 @@
 <form class="flex flex-col gap-4 pb-14 pt-3" action="" method="post">
-    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
-        <label for="">Judul</label>
-        <div class="lg:block hidden">:</div>
-        <input name="judul" placeholder="Masukan judul" required class="lg:w-3/4 w-full py-[0.30rem] px-2 rounded-lg"
-            type="text">
+    {{-- <div class="mb-3 flex gap-7">
+        <label for="nama"
+            class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+        <div class=" text-right">:</div>
+        <div class="flex flex-col w-full gap-3">
+            <input type="text" id="nama" name="name" value=""
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
+    </div> --}}
+
+    <div class="mb-3 flex gap-7">
+        <label for="judul" class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white" for="">Judul</label>
+        <div class="text-right">:</div>
+        <div class="flex flex-col w-full gap-3">
+            <input type="text" id="judul" name="judul" value=""
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+        </div>
     </div>
 
-    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3 h-56 ">
-        <label class="h-fit pr-[25px]" for="">Isi</label>
-        <div class="lg:block hidden">:</div>
-        @include('components.mainForm._wysiwyg')
-    </div>
 
-    <div class="lg:flex block lg:justify-between lg:text-center text-left border-b-2 pb-3">
-        <label for="">Gambar</label>
-        <div class="lg:block hidden">:</div>
-        <div class="w-3/4 py-[0.30rem] px-2 rounded-lg  text-left">
+    <div class="mb-3 flex gap-7">
+        <label for="judul" class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white" >Isi</label>
+        <div class="text-right">:</div>
+        <div class="flex flex-col w-full gap-3">
+            @include('components.mainForm._wysiwyg')
+        </div>
+    </div>
+    
+
+    <div class="mb-3 flex gap-7">
+        <label for="judul" class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white" >Gambar</label>
+        <div class="text-right">:</div>
+        <div class="flex flex-col w-full gap-3">
             <img class=" block w-72" src="" alt="profile">
             <input class="border border-slate-600 w-full rounded-lg" name="img" type="file">
         </div>
