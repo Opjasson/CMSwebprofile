@@ -15,7 +15,8 @@ class SambutanController extends Controller
     //
     public function index() {
         return view('dashboard.konten.sambutan.sambutan',[
-            'action' => route('dashboard.konten.action')
+            'action' => route('dashboard.konten.action'),
+            'isi' => Sambutan::all(['judul','isi','gambar'])
         ]);
     }
 
