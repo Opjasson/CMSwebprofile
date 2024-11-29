@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class type_category extends Model
+class Type_Category extends Model
 {
     use HasFactory;
-    protected $table = "sambutan";
+    protected $table = "type_categories";
 
+
+    public $timestamps = true;
+    
     protected $fillable = [
         'type',
     ];
