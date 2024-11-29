@@ -13,11 +13,13 @@ use Illuminate\Validation\ValidationException;
 class SambutanController extends Controller
 {
     //
-    public function index() {
-        return view('dashboard.konten.sambutan.sambutan',[
+    public function index()
+    {
+        return view('dashboard.konten.sambutan.sambutan', [
             'action' => route('dashboard.konten.action'),
-            'isi' => Sambutan::all(['judul','isi','gambar'])
+            'isi' => Sambutan::first()
         ]);
+        // dd(Sambutan::first());
     }
 
     public function action(Request $request)
@@ -34,25 +36,25 @@ class SambutanController extends Controller
                 'string'
             ],
             'gambar' => [
-                File::types(['jpg','jpeg'])->max(2000)
+                File::types(['jpg', 'jpeg'])->max(2000)
             ]
-            ]);
-        
-            if($validator->fails()){
-                throw ValidationException::withMessages($validator->errors()->messages());
-            }
+        ]);
 
-        if($request->file('gambar')){
+        if ($validator->fails()) {
+            throw ValidationException::withMessages($validator->errors()->messages());
+        }
+
+        if ($request->file('gambar')) {
             $gambar = $request->file('gambar')->store('img');
-        }else{
+        } else {
             $gambar = null;
         }
-        
-        Sambutan::create([
-            'judul' => $request->judul,
-            'isi' => $request->isi,
-            'gambar' => $gambar
-        ]);
-        
+
+        Sambutan::updateOrCreate(
+            ['id' => 3],
+            ['judul' => $request->judul,'isi' => $request->isi, 'gambar' => $gambar]
+        );
+
+        redirect()->back();
     }
 }
