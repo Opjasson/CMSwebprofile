@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Konten;
 use App\Models\Sambutan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\File as FacadesFile;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -44,17 +44,27 @@ class SambutanController extends Controller
             throw ValidationException::withMessages($validator->errors()->messages());
         }
 
+        $dir = public_path('img');
+
         if ($request->file('gambar')) {
-            $gambar = $request->file('gambar')->store('img');
-        } else {
+            if (FacadesFile::exists($dir)) {
+                $files = FacadesFile::files($dir);
+                foreach ($files as $fill) {
+                    FacadesFile::delete($fill);
+                }
+                $gambar = $request->file('gambar')->store('img');
+            } else {
+                $gambar = $request->file('gambar')->store('img');
+            }
+        } else{
             $gambar = null;
         }
 
         Sambutan::updateOrCreate(
-            ['id' => 3],
-            ['judul' => $request->judul,'isi' => $request->isi, 'gambar' => $gambar]
+            ['id' => 4],
+            ['judul' => $request->judul, 'isi' => $request->isi, 'gambar' => $gambar]
         );
+        return redirect()->back();
 
-        redirect()->back();
     }
 }

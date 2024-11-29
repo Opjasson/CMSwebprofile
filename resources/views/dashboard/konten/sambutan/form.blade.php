@@ -37,8 +37,6 @@
         </div>
     </div>
 
-
-
     <div class="mb-3 flex gap-7">
         <label for="judul" class="block w-80 mb-2 text-sm font-medium text-gray-900 dark:text-white">Gambar</label>
         <div class="text-right">:</div>
