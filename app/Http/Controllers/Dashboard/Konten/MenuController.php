@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard\Konten;
 
 use App\Http\Controllers\Controller;
+use App\Models\HalamanKategory;
 use App\Models\Sambutan;
 use App\Models\Type_Category;
 use Illuminate\Http\Request;
@@ -22,6 +23,8 @@ class MenuController extends Controller
 
     public function addMenuHalaman()
     {
-        return view('dashboard.konten.menu.add-menu');
+        return view('dashboard.konten.menu.add-menu',[
+            'dataType' => HalamanKategory::all()
+        ]);
     }
 }

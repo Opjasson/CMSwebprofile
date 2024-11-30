@@ -51,19 +51,22 @@
         <div class="lg:flex max-h-max lg:w-full md:w-[48rem] w-max">
             <x-sideNav.sideNormal />
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem] ">
-                <h1 class="text-4xl font-semiboldbold">Menu Halaman</h1>
-                <div class="border max-w-full">
-                    <header>Konten</header>
-                    <main class="">
-                        <div class="flex border w-fit p-3">
-                            <div>
-                                <h1>File Download</h1>
-                                <p>Menampilkan File Yang Bisa Didownload oleh pengunjung website</p>
+                <h1 class="text-4xl font-semiboldbold mb-3">Menu Halaman</h1>
+                @foreach ($dataType as $item)
+                    <div class="border border-slate-400 max-w-full rounded-lg overflow-hidden">
+                        <header class="bg-blue-400 p-3 text-2xl">{{ $item['judul'] }}</header>
+                        <main class="p-5">
+                            <div class="flex border border-slate-400 w-1/2 p-3 rounded-md gap-5">
+                                <div class="w-3/4">
+                                    <h1 class="text-xl mb-2">File Download</h1>
+                                    <p class="text-sm">Menampilkan File Yang Bisa Didownload oleh pengunjung website</p>
+                                </div>
+                                <a class="border border-blue-600 hover:bg-blue-600 h-fit px-3 py-1 rounded-md text-white bg-blue-500"
+                                    href="">LANJUT &raquo;</a>
                             </div>
-                            <a href="">LANJUT &raquo;</a>
-                        </div>
-                    </main>
-                </div>
+                        </main>
+                    </div>
+                @endforeach
             </main>
         </div>
 

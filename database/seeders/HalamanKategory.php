@@ -42,13 +42,6 @@ class HalamanKategory extends Seeder
                 'created_at' => now(),
                 'updated_at' => now()
             ],
-            [
-                'judul' => 'Akademik',
-                'link' => 'akademik',
-                'tipe' => 'akademik',
-                'created_at' => now(),
-                'updated_at' => now()
-            ]
         ]);
     }
 }
