@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Type_Category;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

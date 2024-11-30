@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('link',50);
             $table->string('tipe',50);
             $table->string('kategori',50);
-            $table->string('folder',100);
+            $table->string('folder',100)->nullable();
             $table->text('deskripsi');
             $table->timestamps();
         });
