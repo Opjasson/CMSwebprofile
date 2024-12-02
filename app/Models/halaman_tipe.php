@@ -17,4 +17,9 @@ class halaman_tipe extends Model
         'folder'
     ];
 
+    public function halCat()
+    {
+        return $this->belongsTo(halaman_category::class, 'kategori');
+    }
+
 }
