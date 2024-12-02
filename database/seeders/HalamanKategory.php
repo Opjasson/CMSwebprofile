@@ -13,7 +13,7 @@ class HalamanKategory extends Seeder
      */
     public function run(): void
     {
-        DB::table('halaman_kategories')->insert([
+        DB::table('halaman_kategoris')->insert([
             [
                 'judul' => 'Konten',
                 'link' => 'konten',

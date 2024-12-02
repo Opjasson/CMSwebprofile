@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Dashboard\Konten;
 
 use App\Http\Controllers\Controller;
+use App\Models\halaman_category;
+use App\Models\halaman_kategori;
+use App\Models\halaman_tipe;
 use App\Models\HalamanKategory;
 use App\Models\Sambutan;
 use App\Models\Type_Category;
@@ -23,8 +26,11 @@ class MenuController extends Controller
 
     public function addMenuHalaman()
     {
+       $halCategory = halaman_tipe::with('halCat')->get();
+
         return view('dashboard.konten.menu.add-menu',[
-            'dataType' => HalamanKategory::all()
+            'dataType' => halaman_kategori::all(),
+            'relasi' => $halCategory
         ]);
     }
 }

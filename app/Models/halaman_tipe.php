@@ -19,7 +19,7 @@ class halaman_tipe extends Model
 
     public function halCat()
     {
-        return $this->belongsTo(halaman_category::class, 'kategori');
+        return $this->belongsTo(halaman_kategori::class,'kategori','tipe');
     }
 
 }

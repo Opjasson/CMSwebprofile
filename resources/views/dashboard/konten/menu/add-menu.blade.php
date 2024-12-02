@@ -53,18 +53,25 @@
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem] ">
                 <h1 class="text-4xl font-semiboldbold mb-3">Menu Halaman</h1>
                 @foreach ($dataType as $item)
-                    <div class="border border-slate-400 max-w-full rounded-lg overflow-hidden">
-                        <header class="bg-blue-400 p-3 text-2xl">{{ $item['judul'] }}</header>
-                        <main class="p-5">
-                            <div class="flex border border-slate-400 w-1/2 p-3 rounded-md gap-5">
-                                <div class="w-3/4">
-                                    <h1 class="text-xl mb-2">File Download</h1>
-                                    <p class="text-sm">Menampilkan File Yang Bisa Didownload oleh pengunjung website</p>
-                                </div>
-                                <a class="border border-blue-600 hover:bg-blue-600 h-fit px-3 py-1 rounded-md text-white bg-blue-500"
-                                    href="">LANJUT &raquo;</a>
-                            </div>
-                        </main>
+                    <div class="border mb-5 border-slate-400 max-w-full rounded-lg overflow-hidden">
+                        <header class="bg-blue-400 p-3 text-2xl">{{ $item['tipe'] }}</header>
+
+                        <div class="border flex flex-wrap pl-10">
+                            @foreach ($relasi as $data)
+                                @if ($item['tipe'] === $data['kategori'])
+                                    <main class="p-5">
+                                        <div class="flex border border-slate-400 w-[27rem] h-32 p-3 rounded-md gap-5">
+                                            <div class="w-3/4">
+                                                <h1 class="text-xl mb-2">{{ $data['judul'] }}</h1>
+                                                <p class="text-sm">{{ $data['deskripsi'] }}</p>
+                                            </div>
+                                            <a class="border border-blue-600 hover:bg-blue-600 h-fit w-28 px-3 py-1 rounded-md text-white bg-blue-500"
+                                                href="">LANJUT &raquo;</a>
+                                        </div>
+                                    </main>
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
                 @endforeach
             </main>

@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class halaman_category extends Model
+class halaman_kategori extends Model
 {
+    //
     use HasFactory;
 
     protected $fillable = [
@@ -17,7 +18,7 @@ class halaman_category extends Model
 
     public function halTipe()
     {
-        return $this->hasMany(halaman_tipe::class);
+        return $this->hasMany(halaman_tipe::class,'tipe','kategori');
     }
 
 }
