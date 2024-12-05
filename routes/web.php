@@ -31,7 +31,9 @@ Route::middleware(['auth'])->group(
         Route::get('/dashboard/sambutan', [SambutanController::class, 'index'])->name('dashboard.konten');
         Route::post('/dashboard/sambutan', [SambutanController::class, 'action'])->name('dashboard.konten.action');
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
-        Route::get('/dashboard/menu/{userId}/tambah', [MenuController::class, 'addMenuHalaman'])->name('dashboard.menu.tambah');
+        Route::get('/dashboard/menu/tambah', [MenuController::class, 'addMenuHalaman'])->name('dashboard.menu.tambah');
+        Route::get('/dashboard/menu/tambah/file', [MenuController::class, 'fileDownload'])->name('dashboard.menu.tambah.file');
+
         Route::get('/dashboard/profile/{userId}', [ProfileController::class, 'index'])->name('user.profile');
         Route::put('/dashboard/profile/{userId}', [ProfileController::class, 'update'])->name('user.profile.update');
         Route::get('/dashboard/profile/{userId}/password', [PasswordController::class, 'index'])->name('user.profile.password');

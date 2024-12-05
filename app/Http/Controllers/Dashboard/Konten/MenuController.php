@@ -33,4 +33,9 @@ class MenuController extends Controller
             'relasi' => $halCategory
         ]);
     }
+
+    public function fileDownload()
+    {
+        return view('dashboard.konten.menu.form-addfileDownload');
+    }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.dashboards.dashboard-layout')
 
-@section('title', 'Add menu')
+@section('title', 'file')
 
 @section('content')
     <div class="w-full">
@@ -52,30 +52,21 @@
             <x-sideNav.sideNormal />
             <main class="bg-slate-300 md:px-8 px-3 py-4 lg:w-full md:w-full w-[28rem] ">
                 <h1 class="text-4xl font-semiboldbold mb-3">Menu Halaman</h1>
-                @foreach ($dataType as $item)
-                    <div class="border mb-5 border-slate-400 max-w-full rounded-lg overflow-hidden">
-                        <header class="bg-blue-400 p-3 text-2xl">{{ $item['tipe'] }}</header>
-
-                        <div class="border flex flex-wrap pl-10">
-                            @foreach ($relasi as $data)
-                                @if ($item['tipe'] === $data['kategori'])
-                                    <main class="p-5">
-                                        <div class="flex border border-slate-400 w-[27rem] h-32 p-3 rounded-md gap-5">
-                                            <div class="w-3/4">
-                                                <h1 class="text-xl mb-2">{{ $data['judul'] }}</h1>
-                                                <p class="text-sm">{{ $data['deskripsi'] }}</p>
-                                            </div>
-                                            <a class="border border-blue-600 hover:bg-blue-600 h-fit w-28 px-3 py-1 rounded-md text-white bg-blue-500"
-                                                href="/dashboard/menu/tambah/{{ $data['link'] }}">LANJUT &raquo;</a>
-                                        </div>
-                                    </main>
-                                @endif
-                            @endforeach
+                <h2 class="mb-5">Step 2 : Isi detail menu</h2>
+                <div>
+                    <form class="h-screen">
+                        <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
+                          <label for="judul" class="block w-48 text-md font-medium text-gray-900 dark:text-white">Judul Halaman :</label>
+                          <input type="text" id="judul" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                         </div>
-                    </div>
-                @endforeach
+                        
+                        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <a href="{{ route('dashboard.menu.tambah') }}" class="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full sm:w-auto px-8 py-3 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800">Back</a>
+                      </form>
+                </div>
             </main>
         </div>
 
     </div>
 @endsection
+

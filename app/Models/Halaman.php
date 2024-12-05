@@ -11,6 +11,8 @@ class Halaman extends Model
     use HasFactory;
 
     protected $fillable = [
-        
-    ]
+        'judul',
+        'sub_halaman',
+        'urutan'
+    ];
 }
