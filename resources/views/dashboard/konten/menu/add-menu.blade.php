@@ -66,7 +66,7 @@
                                                 <p class="text-sm">{{ $data['deskripsi'] }}</p>
                                             </div>
                                             <a class="border border-blue-600 hover:bg-blue-600 h-fit w-28 px-3 py-1 rounded-md text-white bg-blue-500"
-                                                href="/dashboard/menu/tambah/{{ $data['link'] }}">LANJUT &raquo;</a>
+                                                href="/dashboard/menu/tambah?type={{ $data['link'] }}">LANJUT &raquo;</a>
                                         </div>
                                     </main>
                                 @endif

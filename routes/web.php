@@ -32,7 +32,6 @@ Route::middleware(['auth'])->group(
         Route::post('/dashboard/sambutan', [SambutanController::class, 'action'])->name('dashboard.konten.action');
         Route::get('/dashboard/menu', [MenuController::class, 'index'])->name('dashboard.menu');
         Route::get('/dashboard/menu/tambah', [MenuController::class, 'addMenuHalaman'])->name('dashboard.menu.tambah');
-        Route::get('/dashboard/menu/tambah/file', [MenuController::class, 'fileDownload'])->name('dashboard.menu.tambah.file');
         Route::post('/dashboard/menu/tambah', [MenuController::class, 'createHal'])->name('dashboard.menu.tambah.action');
 
         

@@ -54,7 +54,7 @@
                 <h1 class="text-4xl font-semiboldbold mb-3">Menu Halaman</h1>
                 <h2 class="mb-5">Step 2 : Isi detail menu</h2>
                 <div>
-                    <form class="h-screen" action="{{ $action }}" method="POST">
+                    <form class="h-screen" action="" method="POST">
                         @csrf
                         @method('POST')
                         <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
@@ -65,7 +65,7 @@
                                 required />
                         </div>
 
-                        <input type="text" value="{{  }}" name="link">
+                        
 
                         <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
                             <label for="subMenu"
