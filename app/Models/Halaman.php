@@ -10,6 +10,7 @@ class Halaman extends Model
     //
     use HasFactory;
 
+    protected $table = "halaman";
     protected $fillable = [
         'judul',
         'sub_halaman',
