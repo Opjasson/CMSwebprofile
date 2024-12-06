@@ -54,7 +54,7 @@
                 <h1 class="text-4xl font-semiboldbold mb-3">Menu Halaman</h1>
                 <h2 class="mb-5">Step 2 : Isi detail menu</h2>
                 <div>
-                    <form class="h-screen" action="" method="POST">
+                    <form class="h-screen" action="{{ route('dashboard.menu.tambah.action') }}" method="POST">
                         @csrf
                         @method('POST')
                         <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
@@ -65,11 +65,13 @@
                                 required />
                         </div>
 
-                        
+                        <input name="tipe" hidden type="text" value="{{ $type }}">
+
 
                         <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
                             <label for="subMenu"
-                                class="block w-48 mb-2 text-md font-medium text-gray-900 dark:text-white">Sub-Menu Dari :</label>
+                                class="block w-48 mb-2 text-md font-medium text-gray-900 dark:text-white">Sub-Menu Dari
+                                :</label>
                             <select id="subMenu" name="up_halaman"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="0" selected>-</option>
@@ -86,7 +88,8 @@
 
                         <div class="mb-5 flex gap-5 border-b-2 border-slate-500 pb-5">
                             <label for="urutanHalaman"
-                                class="block w-48 mb-2 text-md font-medium text-gray-900 dark:text-white">Urutan Halaman :</label>
+                                class="block w-48 mb-2 text-md font-medium text-gray-900 dark:text-white">Urutan Halaman
+                                :</label>
                             <select id="urutanHalaman" name="urutan"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="1" selected>1</option>

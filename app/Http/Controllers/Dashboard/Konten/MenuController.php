@@ -27,16 +27,30 @@ class MenuController extends Controller
 
     public function addMenuHalaman(Request $request)
     {
-        $halCategory = halaman_tipe::with('halCat')->get();
        
+        $halCategory = halaman_tipe::with('halCat')->get();
+        $type = $request->get('type');
 
-        //    dd($request->type);
         if ($request->type === "file") {
-            return view('dashboard.konten.menu.form-addfileDownload', [
+            return view('dashboard.konten.menu.All_Forms.form-addfileDownload', [
                 'dataType' => halaman_kategori::all(),
-                'relasi' => $halCategory
+                'relasi' => $halCategory,
+                'type' => $type
             ]);
-        } else {
+        }elseif($request->type === "home"){
+            return view('dashboard.konten.menu.All_Forms.form-addHome', [
+                'dataType' => halaman_kategori::all(),
+                'relasi' => $halCategory,
+                'type' => $type
+            ]);
+        }elseif($request->type === "profile"){
+            return view('dashboard.konten.menu.All_Forms.form-addProfile', [
+                'dataType' => halaman_kategori::all(),
+                'relasi' => $halCategory,
+                'type' => $type
+            ]);
+        }
+         else {
             return view('dashboard.konten.menu.add-menu', [
                 'dataType' => halaman_kategori::all(),
                 'relasi' => $halCategory,
@@ -47,10 +61,12 @@ class MenuController extends Controller
 
     public function createHal(Request $request)
     {
+        // $test=request('tipe');
+        
         DB::table('halaman')->insert([
             'judul' => $request->judul,
             'link' => Str::slug($request->judul, '-'),
-            'tipe' => $request->type,
+            'tipe' => $request->tipe,
             'sub_halaman' => $request->sub_halaman,
             'urutan' => $request->urutan,
             'created_at' => now(),
