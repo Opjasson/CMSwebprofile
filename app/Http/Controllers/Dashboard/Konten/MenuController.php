@@ -49,6 +49,24 @@ class MenuController extends Controller
                 'relasi' => $halCategory,
                 'type' => $type
             ]);
+        }elseif($request->type === "link"){
+            return view('dashboard.konten.menu.All_Forms.form-addLink', [
+                'dataType' => halaman_kategori::all(),
+                'relasi' => $halCategory,
+                'type' => $type
+            ]);
+        }elseif($request->type === "semua-berita"){
+            return view('dashboard.konten.menu.All_Forms.form-addSemuaBerita', [
+                'dataType' => halaman_kategori::all(),
+                'relasi' => $halCategory,
+                'type' => $type
+            ]);
+        }elseif($request->type === "kategori"){
+            return view('dashboard.konten.menu.All_Forms.form-addKategoriBerita', [
+                'dataType' => halaman_kategori::all(),
+                'relasi' => $halCategory,
+                'type' => $type
+            ]);
         }
          else {
             return view('dashboard.konten.menu.add-menu', [

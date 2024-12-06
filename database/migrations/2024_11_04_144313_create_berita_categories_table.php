@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('judul',50);
             $table->string('link',50);
-            $table->dateTime('tgl');
-            $table->enum('publish', ['ya', 'tidak']);
             $table->timestamps();
         });
     }
